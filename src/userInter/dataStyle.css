@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    display: grid;
+    place-items: center;
+    gap: 50px;
+    margin: 0;
+    height: 100vh;
+    padding: 0 32px;
+    background: #eff9ff;
+    font-family: "Poppins";
+}
+
+#icon {
+    position: absolute;
+    font-size: 29px; /* Adjust as needed */
+    color: #000; /* Adjust as needed */
+}
+
+#icon:hover {
+    color: #006747; /* Adjust as needed */
+}
+
+.card1 {
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+    width: 94%;
+    margin: 0 20px;
+    padding: 170px 30px 54px;
+    border-radius: 24px;
+    background: #ffffff;
+    text-align: center;
+    box-shadow: 0 100px 100px rgb(0 0 0 / 10%);
+}
+
+@media (min-width: 500px) {
+    body {
+        padding: 0;
+    }
+
+    .card1 {
+        margin: 0;
+        width: 1200px;
+        height: 535px;
+        overflow-y: auto;
+    }
+
+    .background1 {
+        position: fixed;
+        top: -50vmin;
+        left: -50vmin;
+        width: 100vmin;
+        height: 100vmin;
+        border-radius: 47% 53% 61% 39% / 45% 51% 49% 55%;
+        background: #006747;
+    }
+
+    .card1::before {
+        content: "";
+        position: absolute;
+        top: -880px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 1000px;
+        height: 1000px;
+        border-radius: 50%;
+        background: #006747;
+    }
+
+    .background1::after {
+        content: "";
+        position: inherit;
+        right: -50vmin;
+        bottom: -55vmin;
+        width: inherit;
+        height: inherit;
+        border-radius: inherit;
+        background: #000;
+    }
+}
+
+.card1 .logo {
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100px;
+    height: 100px;
+}
+
+.card1 > h2 {
+    font-size: 22px;
+    font-weight: 400;
+    margin: 0 0 38px;
+    color: rgba(0, 0, 0, 0.38);
+}
+
+.form1 > input::placeholder {
+    color: rgba(0, 0, 0, 0.28);
+}
+
+.form1,.additional-text  {
+    margin: 0 0 44px;
+    display: grid;
+    gap: 12px;
+    
+}
+.additional-text {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+
+.form1 :is(input, button) {
+    width: 16%;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+    border-spacing: 4px;
+    
+    margin-right: 10px;
+    margin-bottom: 10px;
+    
+}
+
+#add {
+    width: 8%; /* Adjust the width as needed */
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+    border-spacing: 4px;
+    margin-right: 10px; /* Adjust the right margin as needed */
+    margin-left: 489px;
+    
+    
+}
+
+/* General styling for elements with IDs starting with "newCategory" */
+[id^="newCategory"] {
+    width: 180px;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+    margin-right: 14px;
+    
+}
+
+/* Specific styling for newCategory elements */
+#newCategory1 {
+    margin-right: 10px; /* Add margin between the two select elements */
+}
+
+#newCategory2 {
+    margin-left: 210px; /* Add margin between the two select elements */
+    margin-top: -47px;
+}
+
+#newCategory1,
+#newCategory2 {
+    width: 180px;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#newCategory1 {
+    margin-right: 10px; /* Add margin between the two select elements */
+}
+
+#newCategory2 {
+    margin-left: 210px; /* Add margin between the two select elements */
+    margin-top:-47px ;
+}
+
+#category, #newCategory,#newCategory1, #newCategory2,#newCategoryRecycling Revenue {
+    width: 180px;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+#category, #newCategory, #newCategory1, #newCategory2 > option {
+    background-color: #006747;
+    color: #eff9ff;
+}
+
+#newCategory {
+    position: absolute;
+    top: 242px; /* Adjust this value as needed */
+    left: 220px; /* Adjust this value as needed */
+}
+
+option::before {
+    background-color: #eff9ff;
+}
+
+.form1 > button {
+    border: 0;
+    color: #f9f9f9;
+    background: #006747;
+    display: grid;
+    place-items: center;
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 450px;
+    margin-top: 10px;
+    
+}
+
+.card1 > footer {
+    color: #a1a1a1;
+}
+
+.card1 > footer > a {
+    color: #216ce7;
+}
+#alpha {
+    border-bottom: 2px solid #006747;
+    margin-bottom: 18px;
+}
+#LogOut
+{
+    z-index: 100;
+    margin-left: 116%;
+    width: 7%;
+    height: 36px;
+    border-radius: 18px;
+    font-size: 16px;
+    font-family: inherit;
+    border-spacing: 4px;
+    background-color: red;
+    color: #eff9ff;
+    border: #006747;
+    
+    margin-bottom: 10px;
+
+   
+}
+span
+{
+    margin-top: 6px;
+}

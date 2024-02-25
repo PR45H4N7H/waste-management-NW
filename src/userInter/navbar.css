@@ -1,0 +1,99 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 100vh;
+  font-family: Hack, monospace;
+  padding-top: 50px; /* Add some top padding to move content down */
+}
+
+div {
+  color: #727272;
+  text-align: center;
+}
+
+p {
+  margin: 16px;
+  font-size: 96px;
+  color: #ccc;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 1s ease-in-out;
+  position: relative;
+}
+
+p::before {
+  content: attr(data-item);
+  transition: all 1s ease-in-out;
+  color: green;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+p:hover::before {
+  width: 100%;
+}
+
+nav {
+  /* Position at the top */
+  position: fixed;
+  top: 30px; /* Adjust top position as needed */
+  left: 0;
+  right: 0;
+  background: black;
+  padding: 20px 16px; /* Adjust padding as needed */
+  z-index: 9;
+  width: 90%; /* Adjust width as needed */
+  margin: 0 auto; /* Center the navbar */
+  border-radius: 16px;
+}
+
+.menuItems {
+  list-style: none;
+  display: flex;
+}
+
+.menuItems li {
+  margin: 0 20px; /* Adjust margin as needed */
+}
+
+
+.menuItems li a {
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-weight: 400;
+  transition: all 0.5s ease-in-out;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.menuItems li a::before {
+  content: attr(data-item);
+  transition: 0.5s;
+  color: green;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+}
+
+.menuItems li a:hover::before {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
