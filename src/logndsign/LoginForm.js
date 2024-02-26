@@ -14,7 +14,7 @@ function LoginForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://wst-mngt-server.vercel.app', {
+      const response = await axios.post('http://localhost:3001/api/login', {
         username,
         password,
       });
